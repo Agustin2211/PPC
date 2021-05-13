@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/grupoRiesgo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="grupoDeRiesgo"
+        android:text="Grupo de Riesgo"
+        tools:layout_editor_absoluteX="121dp"
+        tools:layout_editor_absoluteY="155dp" />
+
+    <Button
+        android:id="@+id/informacionPacientes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="1"
+        android:layout_column="0"
+        android:layout_marginTop="72dp"
+        android:onClick="informacionParaPacientes"
+        android:text="Informacion Para Pacientes"
+        app:layout_constraintTop_toBottomOf="@+id/grupoRiesgo"
+        tools:layout_editor_absoluteX="69dp" />
+
+    <Button
+        android:id="@+id/cargaDatos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_row="2"
+        android:layout_column="0"
+        android:layout_marginTop="72dp"
+        android:onClick="cargaDeDatos"
+        android:text="Carga De Datos"
+        app:layout_constraintTop_toBottomOf="@+id/informacionPacientes"
+        tools:layout_editor_absoluteX="124dp" />
+
+</GridLayout>

@@ -18,17 +18,19 @@ public class MainActivity2 extends AppCompatActivity {
         et1 = (EditText)findViewById(R.id.et1);
     }
 
-    //Metodo para el boton aceptar
-    private void Aceptar(View view){
+    //Metodo para el boton Aceptar
+
+    public void Aceptar(View view){
         Intent i = new Intent(this, MainActivity.class);
         i.putExtra("dato", et1.getText().toString());
         startActivity(i);
     }
 
+    //Metodo para el boton Cancelar
 
-    //Metodo para el boton cancelar
-    private void Cancelar(View view){
+    public void Cancelar(View view){
         Intent i = new Intent(this, MainActivity.class);
         startActivity(i);
     }
+
 }
