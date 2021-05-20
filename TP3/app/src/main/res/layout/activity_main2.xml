@@ -6,14 +6,26 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity2">
 
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="312dp"
+        android:layout_row="0"
+        android:layout_column="0"
+        android:scrollHorizontally="true"
+        android:text="Edad entre 65 y 75 años\nFumador\nObesidad Grado 1 o superior\n \nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam urna ex, ultricies at consectetur sit amet, sollicitudin ut purus. Cras fringilla placerat augue. Aenean blandit ullamcorper porttitor. Quisque pharetra nibh lacus, a mollis metus blandit quis. Praesent feugiat arcu sit amet libero efficitur, id malesuada ex scelerisque. Aenean lacinia dolor risus, sit amet pharetra ipsum faucibus quis. Vestibulum tortor nibh, maximus non volutpat vel, convallis quis justo. Fusce id sagittis massa. Vivamus hendrerit magna quis velit pellentesque placerat. Donec eu augue ut nulla scelerisque vestibulum quis id enim. In vestibulum tortor luctus ornare maximus. Mauris vestibulum orci pretium tortor blandit consequat. Nunc faucibus felis auctor, mattis sem sit amet, vestibulum enim. Morbi venenatis dapibus ex nec pellentesque. "
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:scrollbars="vertical"/>
+
     <Button
         android:id="@+id/atras"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_row="0"
+        android:layout_row="1"
         android:layout_column="0"
         android:onClick="atras"
         android:text="Atras"
         tools:layout_editor_absoluteX="126dp"
         tools:layout_editor_absoluteY="123dp" />
+
 </GridLayout>

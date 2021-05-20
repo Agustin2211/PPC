@@ -14,6 +14,12 @@ public class MainActivity4 extends AppCompatActivity {
         setContentView(R.layout.activity_main4);
     }
 
+    //Metodo para ir a la Pantalla 5
+    public void calcular(View view){
+        Intent i = new Intent(this, MainActivity5.class);
+        startActivity(i);
+    }
+
     //Metodo para ir para atras
     public void atras(View view){
         Intent i = new Intent(this, MainActivity.class);
