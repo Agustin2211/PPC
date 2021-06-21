@@ -15,7 +15,9 @@ public class MainActivity4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+    };
 
+        /*
     // Agregar listener al botón
 
         https://parzibyte.me/blog/2019/02/25/validar-edittext-android-seterror-tooltip/
@@ -47,7 +49,7 @@ public class MainActivity4 extends AppCompatActivity {
                 etNumero.requestFocus();
             }
         }
-    })};
+    })}; */
 
     public void Atras (View view){
         Intent i = new Intent(this, MainActivity.class);
