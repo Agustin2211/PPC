@@ -31,6 +31,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese un numero entre 1 y 10"
         android:inputType="number" />
 
     <TextView
@@ -44,6 +45,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Ingrese un numero entre 1 y 10"
         android:inputType="number" />
 
     <TextView
@@ -52,35 +54,25 @@
         android:layout_height="wrap_content"
         android:text="Esquema:" />
 
-    <com.google.android.material.chip.ChipGroup
+    <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="73dp">
 
-        <TextView
-            android:id="@+id/textView5"
+        <RadioButton
+            android:id="@+id/si"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Si:" />
+            android:text="Si"
+            />
 
-        <CheckBox
-            android:id="@+id/checkBox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Si" />
-
-        <TextView
-            android:id="@+id/textView6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="No:" />
-
-        <CheckBox
-            android:id="@+id/checkBox2"
+        <RadioButton
+            android:id="@+id/no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="No" />
 
-    </com.google.android.material.chip.ChipGroup>
+    </RadioGroup>
 
     <Button
         android:id="@+id/calcular4"
@@ -92,7 +84,6 @@
         android:id="@+id/atras4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="Atras"
         android:text="Atras" />
 
 </LinearLayout>
