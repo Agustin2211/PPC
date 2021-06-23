@@ -7,6 +7,14 @@
     android:orientation="vertical"
     tools:context=".MainActivity5">
 
+    <com.android.volley.toolbox.NetworkImageView
+        android:id="@+id/imagenDeLaAPI"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="6dip" />
+
     <Button
         android:id="@+id/compartir_layout5"
         android:layout_width="match_parent"
@@ -17,6 +25,5 @@
         android:id="@+id/atras5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:onClick="Atras"
         android:text="Atras" />
 </LinearLayout>

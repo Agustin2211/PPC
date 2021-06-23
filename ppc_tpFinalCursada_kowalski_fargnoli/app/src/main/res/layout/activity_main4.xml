@@ -14,10 +14,11 @@
         android:text="Paciente:" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/textoPaciente"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="@string/textoPaciente"
         android:inputType="textPersonName" />
 
     <TextView
@@ -31,7 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ingrese un numero entre 1 y 10"
+        android:hint="@string/riesgoRecurrente"
         android:inputType="number" />
 
     <TextView
@@ -45,7 +46,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Ingrese un numero entre 1 y 10"
+        android:hint="@string/riesgoProgreso"
         android:inputType="number" />
 
     <TextView

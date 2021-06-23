@@ -2,7 +2,9 @@ package com.example.ppc_tpfinalcursada_kowalski_fargnoli;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.InputFilter;
 import android.view.View;
@@ -18,18 +20,25 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
 
     Boolean buleano;
 
-    /* NO SIRVE
-    EditText paciente;
+    EditText textoPaciente;
     EditText riesgoRecurrente;
-    int riesgoRecurrenteInt;
     EditText riesgoProgreso;
-    */
 
+    Button calcular;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main4);
+
+        textoPaciente = (EditText)findViewById(R.id.textoPaciente);
+        riesgoRecurrente = (EditText)findViewById(R.id.riesgoRecurrente);
+        riesgoProgreso = (EditText)findViewById(R.id.riesgoProgeso);
+
+        String textoPacienteString = textoPaciente.getText().toString();
+        String riesgoRecurrenteString = riesgoRecurrente.getText().toString();
+        String riesgoProgresoString = riesgoProgreso.getText().toString();
+
 
         RadioGroup SIoNO = findViewById(R.id.radioGroup);
         SI = findViewById(R.id.si);
@@ -41,7 +50,38 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                SharedPreferences preferencesBoton = getSharedPreferences("datos", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferencesBoton.edit();
+                editor.putString("textoPaciente", textoPaciente.getText().toString());
+                editor.putString("riesgoRecurrente", riesgoRecurrente.getText().toString());
+                editor.putString("riesgoProgreso", riesgoProgreso.getText().toString());
+
+                editor.commit();
+
                 Intent i = new Intent(v.getContext(), MainActivity.class);
+                startActivity(i);
+            }
+
+        });
+
+        calcular = findViewById(R.id.calcular4);
+        calcular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MainActivity4.this, MainActivity5.class);
+                i.putExtra("riesgoRecurrente", riesgoRecurrenteString);
+                i.putExtra("riesgoProgreso", riesgoProgresoString);
+                i.putExtra("buleano", buleano);
+
+                SharedPreferences preferencesBoton = getSharedPreferences("datos", Context.MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferencesBoton.edit();
+                editor.putString("textoPaciente", textoPaciente.getText().toString());
+                editor.putString("riesgoRecurrente", riesgoRecurrente.getText().toString());
+                editor.putString("riesgoProgreso", riesgoProgreso.getText().toString());
+
+                editor.commit();
+
                 startActivity(i);
             }
         });
@@ -52,18 +92,17 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
         EditText editText1 = findViewById(R.id.riesgoProgeso);
         editText1.setFilters(new InputFilter[]{ new InputFilterMinMax("1" , "10")});
 
-        //NO SIRVE
-        /*
-        paciente = findViewById(R.id.editTextTextPersonName);
-        riesgoRecurrente = findViewById(R.id.riesgoRecurrente);
-        riesgoRecurrenteInt = Integer.valueOf(riesgoRecurrente.getText().toString());
 
-
-        riesgoProgreso = findViewById(R.id.riesgoProgeso);
-        */
-
+        //GUARDAR INFORMACION
+        SharedPreferences preferencesPaciente = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        textoPaciente.setText(preferencesPaciente.getString("textoPaciente", ""));
+        SharedPreferences preferencesRiesgoRecurrente = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        riesgoRecurrente.setText(preferencesRiesgoRecurrente.getString("riesgoRecurrente", ""));
+        SharedPreferences preferencesRiesgoProgreso = getSharedPreferences("datos", Context.MODE_PRIVATE);
+        riesgoProgreso.setText(preferencesRiesgoProgreso.getString("riesgoProgreso", ""));
 
     }
+
 
     public void onCheckedChanged(RadioGroup arg0, int arg1){
         if (SI.isChecked()){
@@ -73,20 +112,4 @@ public class MainActivity4 extends AppCompatActivity implements RadioGroup.OnChe
         }
     }
 
-
-    //NO SIRVE
-    /*
-    @Override
-    protected void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putInt("riesgoRecurrente", riesgoRecurrenteInt);
-    }
-
-    @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState){
-        super.onRestoreInstanceState(savedInstanceState);
-        riesgoRecurrenteInt = savedInstanceState.getInt("riesgoRecurrente");
-        riesgoRecurrente.setText(String.valueOf(riesgoRecurrenteInt));
-    }
-    */
 }
