@@ -3,12 +3,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity3">
 
     <ScrollView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="400dp">
 
         <LinearLayout
@@ -19,7 +19,7 @@
             <ImageView
                 android:id="@+id/imageView"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/_9709861046_a1a9e12cb8_b" />
 
             <Button
@@ -31,7 +31,7 @@
             <ImageView
                 android:id="@+id/imageView2"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/afiche_sintomas_0" />
 
             <Button
@@ -43,7 +43,7 @@
             <ImageView
                 android:id="@+id/imageView3"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/placa_covid" />
 
             <Button
@@ -55,7 +55,7 @@
             <ImageView
                 android:id="@+id/imageView4"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/unnamed" />
 
             <Button
@@ -79,7 +79,7 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="match_parent"
-                android:layout_height="500dp"
+                android:layout_height="wrap_content"
                 app:srcCompat="@drawable/pagina12_imagen_articulo142944343am" />
 
             <Button
@@ -94,7 +94,7 @@
     <Button
         android:id="@+id/atras3"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:onClick="Atras"
         android:text="Atras" />
 
